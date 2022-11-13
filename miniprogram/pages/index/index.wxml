@@ -1,3 +1,0 @@
-<view class="app">
-    <van-button bindtap="getData" plain type="primary">imusic音乐盒</van-button>
-</view>

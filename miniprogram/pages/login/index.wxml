@@ -1,0 +1,37 @@
+<view class="login-page">
+  <view class="form">
+
+    <!-- 导航栏 -->
+    <view class="tab-bar">
+      <text class="active">登录</text>
+      <text>注册</text>
+    </view>
+
+    <!-- 登录区域 -->
+    <view class="login-container">
+      <view class="title">登录</view>
+      <view class="title-tips">嗨，您好！欢迎登录imusic</view>
+
+      <view class="form-item">
+        <view class="label">用户名/手机</view>
+        <input class="input" placeholder-class="placeholder" placeholder="输入用户名/手机" />
+      </view>
+
+      <view class="form-item">
+        <view class="label">密码</view>
+        <input class="input" placeholder-class="placeholder" placeholder="输入密码" />
+      </view>
+
+      <view class="forget-password">忘记密码？</view>
+
+      <button class="submit-btn">登录</button>
+
+      <view class="register-account">
+        没有账号？<text class="register-account-tips">立即注册</text>
+      </view>
+    </view>
+
+    <!-- 注册区域 -->
+    <view class="register-container"></view>
+  </view>
+</view>

@@ -1,0 +1,97 @@
+@import "../../style/variable.scss";
+
+.login-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+
+  .form {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 85%;
+    background-color: $white-color;
+    border-top-left-radius: 50rpx;
+    border-top-right-radius: 50rpx;
+
+    .tab-bar {
+      height: 100rpx;
+      display: flex;
+      line-height: 100rpx;
+      text-align: center;
+      border-bottom: 6rpx solid $white-color;
+
+      text {
+        flex: 1;
+        color: #63656a;
+
+        &.active {
+          border-bottom: 6rpx solid $primary-color;
+          color: #1f2e35;
+        }
+      }
+    }
+
+    .login-container {
+      padding: 60rpx;
+
+      .title {
+        margin-top: 30rpx;
+        color: #0c2037;
+        font-size: 50rpx;
+        font-weight: 600;
+      }
+
+      .title-tips {
+        color: #7b7e88;
+        margin-top: 20rpx;
+        font-size: 32rpx;
+        margin-bottom: 80rpx;
+      }
+
+      .form-item {
+        margin-bottom: 40rpx;
+
+        .label {
+          font-size: 32rpx;
+          margin-bottom: 20rpx;
+          color: #c1c1c3;
+        }
+
+        .input {
+          font-size: 32rpx;
+          background-color: #f3f5f6;
+          height: 100rpx;
+          border-radius: 30rpx;
+          padding: 0 20rpx;
+        }
+
+        .placeholder {
+          font-size: 28rpx;
+          color: #c1c1c3;
+        }
+      }
+
+      .forget-password {
+        margin-bottom: 60rpx;
+        color: $primary-color;
+      }
+
+      .submit-btn {
+        background-color: $primary-color;
+        border-radius: 30rpx;
+        color: $white-color;
+      }
+
+      .register-account {
+        text-align: center;
+        margin-top: 140rpx;
+
+        .register-account-tips {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -14,17 +14,17 @@
 
       <view class="form-item">
         <view class="label">用户名/手机</view>
-        <input class="input" placeholder-class="placeholder" placeholder="输入用户名/手机" />
+        <input model:value="{{ username }}" class="input" placeholder-class="placeholder" placeholder="输入用户名/手机" />
       </view>
 
       <view class="form-item">
         <view class="label">密码</view>
-        <input class="input" placeholder-class="placeholder" placeholder="输入密码" />
+        <input model:value="{{ password }}" password class="input" placeholder-class="placeholder" placeholder="输入密码" />
       </view>
 
       <view class="forget-password">忘记密码？</view>
 
-      <button class="submit-btn">登录</button>
+      <button class="submit-btn" bindtap="submit">登录</button>
 
       <view class="register-account">
         没有账号？<text class="register-account-tips">立即注册</text>

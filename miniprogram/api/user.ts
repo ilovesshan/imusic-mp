@@ -6,7 +6,7 @@ interface IUserInfo {
 }
 
 export const login = (userInfo: IUserInfo) => {
-  return post("/login", userInfo);
+  return post("/auth", userInfo);
 }
 
 export const getUserInfo = (id: string) => {

@@ -1,7 +1,7 @@
 import Cache from "../utils/cache"
 
-// const BASE_URL: string = "https://imusic-17670-5-1314961027.sh.run.tcloudbase.com";
-const BASE_URL: string = "http://localhost";
+const BASE_URL: string = "https://imusic-17670-5-1314961027.sh.run.tcloudbase.com";
+// const BASE_URL: string = "http://localhost";
 
 type ALLOW_METHODS = "OPTIONS" | "GET" | "HEAD" | "POST" | "PUT" | "DELETE" | "TRACE" | "CONNECT";
 type ALLOW_DATA = string | Map<String, any> | ArrayBuffer | any;
@@ -28,7 +28,7 @@ const baseRequest = (uri: string, method: ALLOW_METHODS, data?: ALLOW_DATA): Pro
       method,
       data,
       header: {
-        "Authorization": `Bearer ${Cache.get("token")}`
+        "Authorization": Cache.get("token") ? "Bearer " + Cache.get("token") : "",
       },
       success: res => {
         if (res.statusCode == 200) {
@@ -37,13 +37,8 @@ const baseRequest = (uri: string, method: ALLOW_METHODS, data?: ALLOW_DATA): Pro
           // 请求失败情况(业务逻辑)
           if (res.statusCode == 401) {
             // 未授权
-            wx.showToast({ title: "授权信息过期，请重新登录授权", icon: "none" })
-            wx.navigateTo({ url: `/pages/login/index` });
-            // const pageStack = getCurrentPages();
-            // const currentPageRoute = pageStack[pageStack.length - 1].route;
-            // if (!currentPageRoute.includes("login")) {
-            //  wx.navigateTo({ url: `/${currentPageRoute}` });
-            // }
+            wx.showToast({ title: "授权信息过期，请重新登录授权" })
+            wx.redirectTo({ url: `/pages/login/index` });
           }
         }
       },

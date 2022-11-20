@@ -14,14 +14,18 @@ Page({
   submit() {
     const { username, password } = this.data;
     login({ username, password }).then(res => {
-      const { id, username, token } = res.data.data;
-      Cache.set("id", id);
-      Cache.set("username", username);
-      Cache.set("token", token);
-
-      // 回到之前进来的界面
-      const pageStack = getCurrentPages();
-      wx.navigateTo({ url: `/${pageStack[0].route}` });
+      const { code, message, data } = res.data;
+      if (code === 200) {
+        const { id, username, token } = data;
+        Cache.set("id", id);
+        Cache.set("username", username);
+        Cache.set("token", token);
+        // 回到之前进来的界面
+        const pageStack = getCurrentPages();
+        wx.navigateTo({ url: `/${pageStack[0].route}` });
+      } else {
+        wx.showToast({ icon: "error", title: message })
+      }
     })
   }
 })

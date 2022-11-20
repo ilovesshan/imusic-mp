@@ -22,7 +22,11 @@ Page({
         Cache.set("token", token);
         // 回到之前进来的界面
         const pageStack = getCurrentPages();
-        wx.navigateTo({ url: `/${pageStack[0].route}` });
+        if (pageStack.length == 1) {
+          wx.redirectTo({ url: "/pages/home/index" });
+        } else {
+          wx.navigateBack({ delta: 1 });
+        }
       } else {
         wx.showToast({ icon: "error", title: message })
       }

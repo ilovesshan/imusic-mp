@@ -1,0 +1,27 @@
+@import "../../../../style/variable.scss";
+
+.nav-divider {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 48rpx 0 50rpx;
+  margin-top: 80rpx;
+  margin-bottom: 40rpx;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-left {
+    font-family: Rubik-Bold;
+    font-size: 44rpx;
+    color: #002251;
+    font-weight: 700;
+  }
+
+  .nav-right {
+    font-family: Rubik-Regular;
+    font-size: 14px;
+    color: $primary-color;
+    font-weight: 400;
+  }
+}

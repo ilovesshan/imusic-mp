@@ -37,8 +37,8 @@ const baseRequest = (uri: string, method: ALLOW_METHODS, data?: ALLOW_DATA): Pro
           // 请求失败情况(业务逻辑)
           if (res.statusCode == 401) {
             // 未授权
-            wx.showToast({ title: "授权信息过期，请重新登录授权" })
-            wx.redirectTo({ url: `/pages/login/index` });
+            wx.navigateTo({ url: `/pages/login/index` });
+            wx.showToast({ title: "授权信息过期，请重新登录授权", icon: "none" })
           }
         }
       },

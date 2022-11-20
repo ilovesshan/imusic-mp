@@ -1,0 +1,35 @@
+.nav-category-card {
+  position: relative;
+  width: 280rpx;
+  height: 440rpx;
+  margin-left: 50rpx;
+
+  .card-cover {
+    width: 280rpx;
+    height: 440rpx;
+    border-radius: 30rpx;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 40rpx;
+    left: 30rpx;
+    font-family: Rubik-Medium;
+    font-size: 36rpx;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .card-sub-title {
+    position: absolute;
+    top: 94rpx;
+    left: 30rpx;
+    opacity: 0.8;
+    font-family: Rubik-Regular;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}

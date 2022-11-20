@@ -1,2 +1,47 @@
-<!--pages/home/index.wxml-->
-<text bindtap="loadUserInfo">pages/home/index.wxml</text>
+<view class="home-page">
+  <view class="header">
+
+    <!-- 个人信息区域 -->
+    <view class="cover">
+      <image src="/assets/images/home/bg.png"></image>
+      <view class="user-info">
+        <image class="avatar" src="/assets/images/common/63763453.jpg"></image>
+        <view class="titles">
+          <view class="title">晚上好</view>
+          <view class="sub-title">ilovesshan</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 分类导航区域 -->
+    <scroll-view class="nav-category" scroll-x="true" enable-flex="true">
+      <nav-category-card title="Hip Hop" paycount="1895" iconPath="/assets/images/home/banner01.png" />
+      <nav-category-card title="Soul Pop" paycount="4129" iconPath="/assets/images/home/banner02.png" />
+      <nav-category-card title="Lo-Fi Beats" paycount="4897" iconPath="/assets/images/home/banner03.png" />
+    </scroll-view>
+  </view>
+
+  <!-- 流行音乐家 -->
+  <nav-divider leftTitle="流行音乐家" rightTitle="查看全部" />
+  <scroll-view class="musician" scroll-x="true" enable-flex="true">
+    <view class="musican-item">
+      <image class="musician-avatar" src="/assets/images/home/artist01.png"></image>
+      <view class="musician-author">蕾哈娜</view>
+      <view class="position">艺术家</view>
+    </view>
+    <view class="musican-item">
+      <image class="musician-avatar" src="/assets/images/home/artist02.png"></image>
+      <view class="musician-author">波兹·马龙</view>
+      <view class="position">艺术家</view>
+    </view>
+    <view class="musican-item">
+      <image class="musician-avatar" src="/assets/images/home/artist03.png"></image>
+      <view class="musician-author">爱莉安娜·格兰德</view>
+      <view class="position">艺术家</view>
+    </view>
+  </scroll-view>
+
+  <!-- 特色播放列表 -->
+  <!-- <nav-divider leftTitle="特色播放列表" rightTitle="查看全部" /> -->
+
+</view>

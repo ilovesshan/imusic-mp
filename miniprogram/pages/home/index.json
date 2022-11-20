@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "nav-category-card": "./components/nav-category-card/nav-category-card",
+    "nav-divider": "./components/nav-divider/nav-divider"
+  }
 }

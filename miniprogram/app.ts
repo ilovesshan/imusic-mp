@@ -27,7 +27,7 @@ App<ImusicAppOption>({
   onLaunch() {
     if (!this.globalData.imusic.token) {
       // 不存在token就去登录页面
-      wx.navigateTo({
+      wx.redirectTo({
         url: "/pages/login/index"
       });
     }

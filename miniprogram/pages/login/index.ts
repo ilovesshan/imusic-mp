@@ -21,8 +21,9 @@ Page({
         Cache.set("username", username);
         Cache.set("token", token);
         // 回到之前进来的界面
-        const pageStack = getCurrentPages();
-        wx.navigateTo({ url: `/${pageStack[0].route}` });
+         const pageStack = getCurrentPages();
+         console.log(pageStack);
+        wx.navigateBack({ delta: 1 });
       } else {
         wx.showToast({ icon: "error", title: message })
       }

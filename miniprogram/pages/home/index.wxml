@@ -1,2 +1,2 @@
 <!--pages/home/index.wxml-->
-<text bindtap="loadUserInfo">pages/home/index.wxml</text>
+<text bindtap="loadUserInfo">pages/home11/index.wxml</text>

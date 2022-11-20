@@ -1,0 +1,6 @@
+<view class="nav-category-card">
+  <view class="card-title">{{ title }}</view>
+  <view class="card-sub-title">{{ paycount}} 播放量</view>
+  <view class="card-sub-title">{{ paycount}} 播放量</view>
+  <image class="card-cover" src="{{ iconPath }}"></image>
+</view>
